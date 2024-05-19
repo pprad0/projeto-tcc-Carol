@@ -1,6 +1,7 @@
 const express = require('express')
-// const rotas = require('./routes/Rotas')
+const rotas = require('./routes/rotas')
 const cors = require('cors');
+const { Console } = require('console');
 
 const app = express()
 //app.use(express.static("desafio-front"))
@@ -15,7 +16,9 @@ app.use(express.json())
 
 // Colocar função que irá começar a fazer tudo, aqui
 
-// app.use(rotas)
+app.use(rotas)
 
+const porta = 3000;
+console.log(`Utilizando a porta localhost ${3000}`);
 
-app.listen(3000)
+app.listen(porta)
