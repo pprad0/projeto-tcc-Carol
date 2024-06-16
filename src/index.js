@@ -13,9 +13,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 app.use(express.json())
-
-// Colocar função que irá começar a fazer tudo, aqui
-
 app.use(rotas)
 
 const porta = 3000;

@@ -2,10 +2,11 @@ const express = require('express')
 const rotas = express();
 
 //importação Controller
-const cliente = require('../controllers/controllerGeral');
+const controller = require('../controllers/controllerGeral');
 
-//get teste
-rotas.get('/teste', cliente.listarTeste);
+//começar a enviar requisições e guardar dados
+rotas.get('/iniciar', controller.listar);
+rotas.get('/usar-urls-do-banco', controller.usarUrls);
 
 
 module.exports = rotas; 
